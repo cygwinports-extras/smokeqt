@@ -1,0 +1,254 @@
+--- origsrc/smokeqt-4.7.0/phonon/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/phonon/CMakeLists.txt	2011-08-04 18:00:02.531823700 -0500
+@@ -49,5 +49,8 @@ target_link_libraries(smokephonon smokeq
+ 
+ set_target_properties(smokephonon PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+ 
+-install(TARGETS smokephonon DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokephonon 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../phonon_smoke.h DESTINATION include/smoke)
+--- origsrc/smokeqt-4.7.0/qimageblitz/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qimageblitz/CMakeLists.txt	2011-08-04 18:00:02.535823900 -0500
+@@ -28,5 +28,8 @@ target_link_libraries(smokeqimageblitz s
+ 
+ set_target_properties(smokeqimageblitz PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+ 
+-install(TARGETS smokeqimageblitz DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqimageblitz 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qimageblitz_smoke.h DESTINATION include/smoke )
+--- origsrc/smokeqt-4.7.0/qsci/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qsci/CMakeLists.txt	2011-08-04 18:00:02.538824100 -0500
+@@ -44,5 +44,8 @@ target_link_libraries(smokeqsci smokeqtc
+ 
+ set_target_properties(smokeqsci PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+ 
+-install(TARGETS smokeqsci DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqsci 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qsci_smoke.h DESTINATION include/smoke)
+--- origsrc/smokeqt-4.7.0/qt3support/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qt3support/CMakeLists.txt	2011-08-04 18:00:02.541824300 -0500
+@@ -85,5 +85,8 @@ set_target_properties(smokeqt3support PR
+ 
+ # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
+ # for Qt only installs
+-install(TARGETS smokeqt3support DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqt3support 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qt3support_smoke.h DESTINATION include/smoke)
+--- origsrc/smokeqt-4.7.0/qtcore/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qtcore/CMakeLists.txt	2011-08-04 18:00:02.545824500 -0500
+@@ -82,7 +82,10 @@ set_target_properties(smokeqtcore PROPER
+ 
+ # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
+ # for Qt only installs
+-install(TARGETS smokeqtcore DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqtcore 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtcore_smoke.h DESTINATION include/smoke)
+ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/qt-config.xml DESTINATION share/smokegen)
+ install(FILES ${QTDEFINES_FILE} DESTINATION share/smokegen)
+--- origsrc/smokeqt-4.7.0/qtdbus/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qtdbus/CMakeLists.txt	2011-08-04 18:00:02.548824700 -0500
+@@ -34,5 +34,8 @@ set_target_properties(smokeqtdbus PROPER
+ 
+ # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
+ # for Qt only installs
+-install(TARGETS smokeqtdbus DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqtdbus 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtdbus_smoke.h DESTINATION include/smoke)
+--- origsrc/smokeqt-4.7.0/qtdeclarative/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qtdeclarative/CMakeLists.txt	2011-08-04 18:00:02.551824900 -0500
+@@ -41,5 +41,8 @@ set_target_properties(smokeqtdeclarative
+ 
+ # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
+ # for Qt only installs
+-install(TARGETS smokeqtdeclarative DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqtdeclarative 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtdeclarative_smoke.h DESTINATION include/smoke)
+--- origsrc/smokeqt-4.7.0/qtgui/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qtgui/CMakeLists.txt	2011-08-04 18:00:02.554825000 -0500
+@@ -72,5 +72,8 @@ set_target_properties(smokeqtgui PROPERT
+ 
+ # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
+ # for Qt only installs
+-install(TARGETS smokeqtgui DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqtgui 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtgui_smoke.h DESTINATION include/smoke)
+--- origsrc/smokeqt-4.7.0/qthelp/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qthelp/CMakeLists.txt	2011-08-04 18:00:02.557825200 -0500
+@@ -41,5 +41,8 @@ set_target_properties(smokeqthelp PROPER
+ 
+ # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
+ # for Qt only installs
+-install(TARGETS smokeqthelp DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqthelp 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qthelp_smoke.h DESTINATION include/smoke)
+--- origsrc/smokeqt-4.7.0/qtmultimedia/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qtmultimedia/CMakeLists.txt	2011-08-04 18:00:02.560825400 -0500
+@@ -38,5 +38,8 @@ set_target_properties(smokeqtmultimedia
+ 
+ # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
+ # for Qt only installs
+-install(TARGETS smokeqtmultimedia DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqtmultimedia 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtmultimedia_smoke.h DESTINATION include/smoke)
+--- origsrc/smokeqt-4.7.0/qtnetwork/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qtnetwork/CMakeLists.txt	2011-08-04 18:00:02.562825500 -0500
+@@ -34,5 +34,8 @@ set_target_properties(smokeqtnetwork PRO
+ 
+ # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
+ # for Qt only installs
+-install(TARGETS smokeqtnetwork DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqtnetwork 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtnetwork_smoke.h DESTINATION include/smoke)
+--- origsrc/smokeqt-4.7.0/qtopengl/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qtopengl/CMakeLists.txt	2011-08-04 18:00:02.565825700 -0500
+@@ -38,5 +38,8 @@ set_target_properties(smokeqtopengl PROP
+ 
+ # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
+ # for Qt only installs
+-install(TARGETS smokeqtopengl DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqtopengl 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtopengl_smoke.h DESTINATION include/smoke)
+--- origsrc/smokeqt-4.7.0/qtscript/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qtscript/CMakeLists.txt	2011-08-04 18:00:02.568825800 -0500
+@@ -27,5 +27,8 @@ target_link_libraries(smokeqtscript smok
+ 
+ set_target_properties(smokeqtscript PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+ 
+-install(TARGETS smokeqtscript DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqtscript 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtscript_smoke.h DESTINATION include/smoke )
+--- origsrc/smokeqt-4.7.0/qtsql/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qtsql/CMakeLists.txt	2011-08-04 18:00:02.571826000 -0500
+@@ -41,5 +41,8 @@ set_target_properties(smokeqtsql PROPERT
+ 
+ # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
+ # for Qt only installs
+-install(TARGETS smokeqtsql DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqtsql 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtsql_smoke.h DESTINATION include/smoke)
+--- origsrc/smokeqt-4.7.0/qtsvg/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qtsvg/CMakeLists.txt	2011-08-04 18:00:02.574826200 -0500
+@@ -39,5 +39,8 @@ set_target_properties(smokeqtsvg PROPERT
+ 
+ # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
+ # for Qt only installs
+-install(TARGETS smokeqtsvg DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqtsvg 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtsvg_smoke.h DESTINATION include/smoke)
+--- origsrc/smokeqt-4.7.0/qttest/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qttest/CMakeLists.txt	2011-08-04 18:00:02.577826400 -0500
+@@ -31,5 +31,8 @@ target_link_libraries(  smokeqttest
+ 
+ set_target_properties(smokeqttest PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+ 
+-install(TARGETS smokeqttest DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqttest 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qttest_smoke.h DESTINATION include/smoke)
+--- origsrc/smokeqt-4.7.0/qtuitools/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qtuitools/CMakeLists.txt	2011-08-04 18:00:02.580826500 -0500
+@@ -26,5 +26,8 @@ target_link_libraries(smokeqtuitools smo
+ 
+ set_target_properties(smokeqtuitools PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+ 
+-install(TARGETS smokeqtuitools DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqtuitools 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtuitools_smoke.h DESTINATION include/smoke)
+--- origsrc/smokeqt-4.7.0/qtwebkit/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qtwebkit/CMakeLists.txt	2011-08-04 18:00:02.583826700 -0500
+@@ -32,5 +32,8 @@ target_link_libraries(  smokeqtwebkit
+ 
+ set_target_properties(smokeqtwebkit PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+ 
+-install(TARGETS smokeqtwebkit DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqtwebkit 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtwebkit_smoke.h DESTINATION include/smoke )
+--- origsrc/smokeqt-4.7.0/qtxml/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qtxml/CMakeLists.txt	2011-08-04 18:00:02.586826900 -0500
+@@ -37,5 +37,8 @@ set_target_properties(smokeqtxml PROPERT
+ 
+ # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
+ # for Qt only installs
+-install(TARGETS smokeqtxml DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqtxml 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtxml_smoke.h DESTINATION include/smoke)
+--- origsrc/smokeqt-4.7.0/qtxmlpatterns/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qtxmlpatterns/CMakeLists.txt	2011-08-04 18:00:02.589827000 -0500
+@@ -38,5 +38,8 @@ set_target_properties(smokeqtxmlpatterns
+ 
+ # Don't use the KDE ${LIB_INSTALL_DIR} macro here as this file is
+ # for Qt only installs
+-install(TARGETS smokeqtxmlpatterns DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqtxmlpatterns 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qtxmlpatterns_smoke.h DESTINATION include/smoke)
+--- origsrc/smokeqt-4.7.0/qwt/CMakeLists.txt	2011-05-20 15:33:32.000000000 -0500
++++ src/smokeqt-4.7.0/qwt/CMakeLists.txt	2011-08-04 18:00:02.592827200 -0500
+@@ -44,5 +44,8 @@ target_link_libraries(smokeqwt smokeqtco
+ 
+ set_target_properties(smokeqwt PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+ 
+-install(TARGETS smokeqwt DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokeqwt 
++	LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++	RUNTIME DESTINATION bin
++	ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../qwt_smoke.h DESTINATION include/smoke)

@@ -1,0 +1,5 @@
+category: KDE
+requires: libsmokeqt3 libsmokebase-devel
+external-source: smokeqt
+sdesc: "Qt4 SMOKE bindings (development)"
+ldesc: "SMOKE C wrappers for Qt libraries"

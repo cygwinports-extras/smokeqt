@@ -1,0 +1,3 @@
+category: KDE
+sdesc: "Qt4 SMOKE bindings (sources)"
+ldesc: "SMOKE C wrappers for Qt libraries"
