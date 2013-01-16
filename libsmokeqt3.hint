@@ -1,5 +1,0 @@
-category: KDE
-requires: libgcc1 libphonon4 libqimageblitz4 libqscintilla2_8 libQt3Support4 libQtCore4 libQtDBus4 libQtDeclarative4 libQtGui4 libQtHelp4 libQtMultimedia4 libQtNetwork4 libQtOpenGL4 libQtScript4 libQtSql4 libQtSvg4 libQtTest4 libQtWebKit4 libQtXml4 libQtXmlPatterns4 libqwt5 libsmokebase3 libstdc++6
-external-source: smokeqt
-sdesc: "Qt4 SMOKE bindings (runtime)"
-ldesc: "SMOKE C wrappers for Qt libraries"

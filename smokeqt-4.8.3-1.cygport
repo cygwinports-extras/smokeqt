@@ -1,6 +1,0 @@
-inherit kde4
-
-
-PKG_NAMES="libsmokeqt3 libsmokeqt-devel"
-libsmokeqt3_CONTENTS="usr/bin/*-3.dll"
-libsmokeqt_devel_CONTENTS="usr/include/ usr/lib/ usr/share/"
