@@ -1,10 +1,10 @@
 inherit kde4
 
 NAME="smokeqt"
-VERSION=4.8.5
+VERSION=4.10.5
 RELEASE=1
-CATEGORY="KDE"
-SUMMARY="Qt4 SMOKE bindings"
+CATEGORY="Libs"
+SUMMARY="Qt4 C bindings"
 DESCRIPTION="SMOKE C wrappers for Qt libraries"
 
 PKG_NAMES="libsmokeqt3 libsmokeqt-devel"
